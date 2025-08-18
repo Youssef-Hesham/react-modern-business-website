@@ -24,9 +24,7 @@ export const InfoSectionLight = ({
               <Subtitle>{subtitle}</Subtitle>
               <Title className="text-black mb-5">{title}</Title>
               <p className="text-black mb-4">{text}</p>
-              <ButtonBasicInv to="" primary="false" dark="true" className="mx-auto">
-                {btnText}
-              </ButtonBasicInv>
+
             </div>
           </div>
         </InfoWrapper>
