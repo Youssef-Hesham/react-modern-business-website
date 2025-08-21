@@ -29,7 +29,7 @@ export const Title = styled.h1`
   font-size: 3rem;
 
   @media screen and (max-width: 480px) {
-    font-size: 1.5rem; /* ✅ smaller on mobile */
+    font-size: 3rem; /* ✅ smaller on mobile */
   }
 `;
 
