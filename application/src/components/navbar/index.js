@@ -8,13 +8,15 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
-  NavBtn,
-  NavBtnLink,
 } from "./NavbarElements";
 import "./../../App.css";
 
+// Import the image
+import logo from "../../images/logo.svg";
+
 export const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
+
   const changeNav = () => {
     if (window.scrollY >= 80) {
       setScrollNav(true);
@@ -24,32 +26,36 @@ export const Navbar = ({ toggle }) => {
   };
 
   useEffect(() => {
-      window.addEventListener('scroll', changeNav);      
-  }, [])
+    window.addEventListener("scroll", changeNav);
+    return () => window.removeEventListener("scroll", changeNav); // cleanup
+  }, []);
 
   return (
-    <>
-      <Nav scrollNav={scrollNav}>
-        <NavbarContainer>
-          <NavLogo to="/">
-            <h1 className="logo-text">Lumra Labs</h1>
-          </NavLogo>
-          <MobileIcon onClick={toggle}>
-            <FaBars />
-          </MobileIcon>
-          <NavMenu>
-            <NavItem>
-              <NavLinks to="about">About</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="discover">Discover</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="services">Services</NavLinks>
-            </NavItem>
-          </NavMenu>
-        </NavbarContainer>
-      </Nav>
-    </>
+    <Nav scrollNav={scrollNav}>
+      <NavbarContainer>
+        <NavLogo to="/">
+          <img
+            src={logo}
+            alt="Lumra Labs Logo"
+            className="logo-image"
+            style={{ height: "100px" }}
+          />
+        </NavLogo>
+        <MobileIcon onClick={toggle}>
+          <FaBars />
+        </MobileIcon>
+        <NavMenu>
+          <NavItem>
+            <NavLinks to="about">About</NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks to="discover">Discover</NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks to="services">Services</NavLinks>
+          </NavItem>
+        </NavMenu>
+      </NavbarContainer>
+    </Nav>
   );
 };
