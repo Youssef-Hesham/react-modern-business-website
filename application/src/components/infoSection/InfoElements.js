@@ -26,7 +26,7 @@ export const InfoWrapper = styled.div`
 
 export const Title = styled.h1`
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 3rem;
 
   @media screen and (max-width: 480px) {
     font-size: 1.5rem; /* ✅ smaller on mobile */
@@ -37,7 +37,7 @@ export const Subtitle = styled.h5`
   color: #B05FFD;
   font-weight: 500;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 1.1rem;
 
   @media screen and (max-width: 480px) {

@@ -61,7 +61,7 @@ export const ServicesIcon = styled.img`
 `;
 
 export const ServicesH1 = styled.h1`
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #fff;
   margin-bottom: 64px;
   text-align: center; /* ✅ center title */

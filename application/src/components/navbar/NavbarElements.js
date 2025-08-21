@@ -14,7 +14,7 @@ export const Nav = styled.nav`
   top: 0;
   z-index: 10;
   transition: all 0.3s ease-in-out;
-  overflow-x: hidden; /* ✅ prevent horizontal scroll from nav */
+  overflow-x: hidden;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
@@ -24,28 +24,34 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center; /* ✅ keeps logo & icons aligned */
+  align-items: center;
   height: 80px;
   z-index: 1;
   width: 100%;
-  padding: 0 16px; /* ✅ reduced from 24px */
+  padding: 0 16px;
   max-width: 1100px;
-  overflow: hidden; /* ✅ prevents content overflow */
+  overflow: hidden;
 `;
 
 export const NavLogo = styled(LinkR)`
-  color: #fff;
-  justify-self: flex-start;
-  cursor: pointer;
-  font-size: 1.5rem;
   display: flex;
   align-items: center;
-  font-weight: bold;
+  cursor: pointer;
   text-decoration: none;
-  transition: all ease 0.2s;
 
-  &:hover {
-    color: #b05ffd;
+  img {
+    height: 200px;
+    padding-top: 20px;
+
+    @media screen and (max-width: 768px) {
+      height: 120px;
+      padding-top: 10px;
+    }
+
+    @media screen and (max-width: 480px) {
+      height: 200px;
+      padding-top: 20px;
+    }
   }
 `;
 
@@ -66,7 +72,7 @@ export const NavMenu = styled.ul`
   list-style: none;
   text-align: center;
   height: 80px;
-  margin: 0; /* ✅ removed margin-right: -22px; */
+  margin: 0;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -120,7 +126,6 @@ export const NavBtnLink = styled(LinkR)`
   font-weight: 900;
 
   &:hover {
-    transition: all 0.2s ease-in-out;
     background: #fff;
     color: #b05ffd;
   }

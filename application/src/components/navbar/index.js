@@ -34,12 +34,7 @@ export const Navbar = ({ toggle }) => {
     <Nav scrollNav={scrollNav}>
       <NavbarContainer>
         <NavLogo to="/">
-          <img
-            src={logo}
-            alt="Lumra Labs Logo"
-            className="logo-image"
-            style={{ height: "100px" }}
-          />
+          <img src={logo} alt="Lumra Labs Logo" />
         </NavLogo>
         <MobileIcon onClick={toggle}>
           <FaBars />

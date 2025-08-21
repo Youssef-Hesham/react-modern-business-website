@@ -19,7 +19,7 @@ export const InfoWrapper = styled.div `
 
 export const Title = styled.h1 `
     font-weight: 900;
-
+    font-size: 3rem;
 `
 
 export const Subtitle = styled.h5 `
