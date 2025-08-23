@@ -37,8 +37,8 @@ const Footer = () => {
                 <FaLinkedin /> LinkedIn
               </FooterLink>
 
-              <FooterLink href="mailto:info@lumralabs.com">
-                <FaEnvelope /> info@lumralabs.com
+              <FooterLink href="mailto:support@lumralabs.com">
+                <FaEnvelope /> support@lumralabs.com
               </FooterLink>
             </div>
           </div>
